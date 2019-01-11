@@ -32,8 +32,11 @@ html {
   .menubar_inhoud {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    width: 40px;
     align-items: center;
     margin-top: 1.5rem;
+    margin-left: 0.3rem;
   }
 
   .nav {
@@ -78,6 +81,7 @@ html {
 
   .sidebar_inhoud {
     border-top: 5px solid black;
+    position: fixed;
   }
   .sidebar_header {
       font-weight: 700;
@@ -120,11 +124,8 @@ html {
       border-radius: 0.2rem;
   }
 
-  
-  
    /* Alles wat met de main te maken heeft */
   .main {
-    border: 2px solid blue;
     display: flex;
     flex-direction: column;
   }
@@ -194,8 +195,83 @@ html {
     margin-top:0;
   }
   
+  /* Onderste gedeelte van de main */
   .calendar {
-    border: 2px solid purple;
+    padding-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    background: white;
+  }
+
+  .days {
+    flex: 5 1 auto;
+    border-top: 5px solid black;
+    margin-right: 200px;
+  }
+
+  .event {
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    grid-template-columns: 120px 2fr 3fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-areas:  
+          "event_image event_date ."
+          "event_image event_name ."
+          "event_image event_text .";
+  }
+
+  .event_image {
+    grid-area: event_image;
+    width: 120px;
+    height: auto;
+  }
+
+  .event_date {
+    grid-area: event_date;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 50;
+    margin: 0px 1rem;
+  }
+
+  .event_name {
+    grid-area: event_name;
+    line-height: 1.4rem;
+    margin: 0px 1rem;
+  }
+
+  .event_text {
+    grid-area: event_text;
+    margin: 0px 1rem;
+    font-size: 1.2rem;
+    font-weight: 10;
+  }
+
+  .month {
+    flex: 1 1 auto;
+  }
+
+  .month_afk {
+    font-size: 2.4rem;
+    font-weight: 1;
+    margin: 0;
+  }
+
+  .month_year {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .month_kies {
+    margin: 0;
+  }
+
+  .month-year .driehoek {
+    font-size: 1rem;
   }
 
 
