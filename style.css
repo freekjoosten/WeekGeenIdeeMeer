@@ -417,9 +417,10 @@ html {
   }
 
   .hero_items {
-    position: relative;
+    /* position: relative; */
     text-transform: uppercase;
-    left: 30px;
+    left: 2rem;
+    bottom: 10rem;
   }
 
   .hero_link {
