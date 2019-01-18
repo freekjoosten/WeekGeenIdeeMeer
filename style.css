@@ -382,6 +382,7 @@ html {
 
  .H1_hero {
    font-size: 2rem;
+   width: 60%;
  }
 .H2_hero {
   font-size: 1.5rem;
@@ -396,6 +397,7 @@ html {
    margin: 0px 5px;
    /* z-index: 1000; */
  }
+  }
 
  .month_year, .month_afk {
   font-size: 2rem;
@@ -406,10 +408,67 @@ html {
  }
  
 
- @media screen and (max-width: 1000px) {
-  /* .hero {
+ @media screen and (max-width: 500px) {
+  .hero {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  } */
+  }
+
+  .hero_items {
+    position: relative;
+    text-transform: uppercase;
+    left: 30px;
+  }
+
+  .hero_link {
+    max-width: 300px;
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .eerste_hero_item {
+    max-width: 300px;
+  }
+
+  .tweede_hero_item {
+    left: 0px;
+  }
+
+  .derde_hero_item {
+    position: absolute;
+    bottom: -150px;
+  }
+
+  .H1_hero {
+    font-size: 1.5rem;
+    width: 300px;
+    line-height: 1.5rem;
+  }
+
+  .H2_hero {
+    font-size: 1.5rem;
+  }
+
+  .event_link {
+    padding-bottom: 10px;
+    grid-template-columns: 120px 1fr;
+    grid-template-areas:  
+          "event_image event_date"
+          "event_image event_name"
+          "event_image event_text";
+  }
+
+  .event_date {
+    font-size: 1rem;
+  }
+
+  .event_name {
+    font-size: 1rem;
+  }
+
+  .event_text {
+    font-size: 1rem;
+  }
+}
